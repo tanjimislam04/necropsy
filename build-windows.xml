@@ -1,4 +1,4 @@
-<project name="AutopsyTSKTargets">
+<project name="NecropsyTSKTargets">
     
     <!-- Directory paths -->
     <property name="amd64" location="${basedir}/Core/release/modules/lib/amd64" />

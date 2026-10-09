@@ -12,7 +12,7 @@ usage() {
     echo "Usage: unix_setup.sh [-j java_home] [-n application_name]" 1>&2;
 }
 
-APPLICATION_NAME="autopsy";
+APPLICATION_NAME="necropsy";
 
 while getopts "j:n:" o; do
     case "${o}" in

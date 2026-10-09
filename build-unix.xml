@@ -1,4 +1,4 @@
-<project name="AutopsyTSKTargets">
+<project name="NecropsyTSKTargets">
     <target name="testTSKLibs">
         <property environment="env"/>
         <available file="${env.TSK_HOME}/bindings/java/jni/.libs/libtsk_jni.dylib" property="tsk_dylib.present"/>

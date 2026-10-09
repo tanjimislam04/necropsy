@@ -172,7 +172,7 @@ KeywordSearch.cancelImportMsg=Cancel import
 KeywordSearch.overwriteListPrompt=Keyword list <{0}> already exists locally, overwrite?
 KeywordSearch.importOwConflict=Import list conflict
 KeywordSearch.kwListFailImportMsg=Keyword list not imported
-KeywordSearchListsManagementPanel.fileExtensionFilterLbl=Autopsy Keyword List File (xml)
+KeywordSearchListsManagementPanel.fileExtensionFilterLbl=Necropsy Keyword List File (xml)
 KeywordSearchListsManagementPanel.fileExtensionFilterLb2=Encase Keyword List File (txt)
 KeywordSearch.listImportFeatureTitle=Keyword List Import
 KeywordSearchIngestModule.moduleName=Keyword Search
@@ -356,7 +356,7 @@ SolrSearch.creatingNewIndex.msg=Creating new text index
 SolrSearch.findingIndexes.msg=Looking for existing text index directories
 # {0} - futureVersion
 # {1} - currentVersion
-SolrSearch.futureIndexVersion.msg=The text index for the case is for Solr {0}. This version of Autopsy is compatible with Solr {1}.
+SolrSearch.futureIndexVersion.msg=The text index for the case is for Solr {0}. This version of Necropsy is compatible with Solr {1}.
 SolrSearch.indentifyingIndex.msg=Identifying text index to use
 SolrSearch.lookingForMetadata.msg=Looking for text index metadata file
 SolrSearch.openCore.msg=Opening text index. For large cases this may take several minutes.

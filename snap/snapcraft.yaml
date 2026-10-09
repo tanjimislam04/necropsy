@@ -18,16 +18,16 @@
 
 # yaml reference here: https://snapcraft.io/docs/snapcraft-yaml-reference
 # sample yaml files here: https://github.com/videolan/vlc/blob/master/extras/package/snap/snapcraft.yaml, https://github.com/canonical/firefox-snap/blob/stable/snapcraft.yaml
-name: autopsy
-title: Autopsy
+name: necropsy
+title: Necropsy
 # more on base snaps here: https://snapcraft.io/docs/base-snaps
 # core is based on corresponding ubuntu version.  ubuntu version information can be found here: https://wiki.ubuntu.com/Releases
 base: core22
 version: 4.22.1
 summary: Extensible Digital Forensics Platform # 79 char long summary
 description: |
-  Autopsy® is the premier open source forensics platform which is fast, easy-to-use, and capable of analyzing all types of mobile devices and digital media. Its plug-in architecture enables extensibility from community-developed or custom-built modules. Autopsy evolves to meet the needs of hundreds of thousands of professionals in law enforcement, national security, litigation support, and corporate investigation.
-  Disclaimer: due to the system access necessary for Autopsy to perform correctly, this snap is highly privileged and uses the following interfaces:
+  Necropsy® is the premier open source forensics platform which is fast, easy-to-use, and capable of analyzing all types of mobile devices and digital media. Its plug-in architecture enables extensibility from community-developed or custom-built modules. Necropsy evolves to meet the needs of hundreds of thousands of professionals in law enforcement, national security, litigation support, and corporate investigation.
+  Disclaimer: due to the system access necessary for Necropsy to perform correctly, this snap is highly privileged and uses the following interfaces:
   - block-devices, dm-crypt, fuse-support, removable-media, mount-observe, and system-files-dev (system-files read access to /dev) to find and ingest data sources
   - system-files-hugepages (system-files read access to /sys/kernel/mm/hugepages), and hugepages-control to run Solr for indexing keywords in files, which in turn uses hugepages for performance implications
   - desktop-launch to launch file manager to view log folders, web browsers online/offline help, and user default applications for opening extracted files in external applications
@@ -229,7 +229,7 @@ parts:
       cat <<EOF > $AUTOPSY_LOCATION/bin/autopsywrapper.sh
       #!/bin/bash
       mkdir -p \$SNAP_USER_COMMON/tmp
-      echo Starting Autopsy...
+      echo Starting Necropsy...
       \$SNAP/autopsy/bin/autopsy "\$@"
       EOF
 

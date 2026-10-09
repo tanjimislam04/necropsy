@@ -73,7 +73,7 @@ AddMultipleImagesTask.imageError=Error adding image {0} to the database
 # {1} - deviceId
 # {2} - exceptionMessage
 AddMultipleImagesTask.nonCriticalErrorAdding=Non-critical error adding {0} for device {1}: {2}
-LogicalImagerDSProcessor.dataSourceType=Autopsy Logical Imager Results
+LogicalImagerDSProcessor.dataSourceType=Necropsy Logical Imager Results
 LogicalImagerDSProcessor.destinationDirectoryConfirmation=Destination directory confirmation
 # {0} - directory
 LogicalImagerDSProcessor.destinationDirectoryConfirmationMsg=The logical imager folder {0} already exists,\ndo you want to add it again using a new folder name?

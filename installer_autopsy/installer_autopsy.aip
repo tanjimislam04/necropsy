@@ -12,7 +12,7 @@
     <ROW Property="Manufacturer" Value="Sleuth Kit Labs" ValueLocId="*"/>
     <ROW Property="ProductCode" Value="1033:{482B4ACC-AC9B-4B1C-AABE-043D14E760B3} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="Autopsy" ValueLocId="*"/>
+    <ROW Property="ProductName" Value="Necropsy" ValueLocId="*"/>
     <ROW Property="ProductVersion" Value="4.23.0" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{6AAD1A1D-40C1-4515-B4D6-EA5A167FFA77}"/>

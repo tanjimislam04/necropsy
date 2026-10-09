@@ -1,5 +1,5 @@
 AdvancedAutoIngestSettingsPanel.AccessibleContext.accessibleName=
-AdvancedAutoIngestSettingsPanel.ItemDisabled.text=Item disabled based upon current Autopsy mode.
+AdvancedAutoIngestSettingsPanel.ItemDisabled.text=Item disabled based upon current Necropsy mode.
 AdvancedAutoIngestSettingsPanel.jPanelFolderMaintenanceSettings.border.title=Folder Maintenance Settings
 AdvancedAutoIngestSettingsPanel.lbConcurrentJobsPerCase.toolTipText=A soft limit on the number of concurrent jobs per case when multiple cases are processed simultaneously.
 AdvancedAutoIngestSettingsPanel.lbInputScanInterval.AccessibleContext.accessibleDescription=The interval
