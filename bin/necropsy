@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# Necropsy Smart Launcher
+# ==============================================================================
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CONF_FILE="${SCRIPT_DIR}/etc/necropsy.conf"
+
+JDK_HOME=""
+if [ -f "$CONF_FILE" ]; then
+    JDK_HOME=$(grep -E '^\s*jdkhome=' "$CONF_FILE" | head -n 1 | cut -d '=' -f 2 | tr -d '"')
+fi
+
+if [ -z "$JDK_HOME" ] || [ ! -x "${JDK_HOME}/bin/java" ]; then
+    if [ -x "${SCRIPT_DIR}/.necropsy/jre/bin/java" ]; then
+        JDK_HOME="${SCRIPT_DIR}/.necropsy/jre"
+    elif [ -n "$JAVA_HOME" ] && [ -x "${JAVA_HOME}/bin/java" ]; then
+        JDK_HOME="${JAVA_HOME}"
+    fi
+fi
+
+if [ -z "$JDK_HOME" ] || [ ! -x "${JDK_HOME}/bin/java" ]; then
+    echo "ERROR: Java runtime not configured for Necropsy."
+    echo "Please run: ${SCRIPT_DIR}/install.sh to automatically setup runtime."
+    exit 1
+fi
+
+# Detect Wayland vs X11 splash screen delay
+EXTRA_ARGS=""
+if [ -n "$WAYLAND_DISPLAY" ]; then
+    EXTRA_ARGS="-J-Dawt.useSystemAAFontSettings=on -J-Dswing.aatext=true"
+fi
+
+# Ensure executable permissions on NetBeans harness
+chmod +x "${SCRIPT_DIR}/platform/lib/nbexec" 2>/dev/null || true
+
+# Launch application
+exec "${SCRIPT_DIR}/platform/lib/nbexec" \
+    --branding necropsy \
+    --clusters "${SCRIPT_DIR}/necropsy:${SCRIPT_DIR}/platform" \
+    --jdkhome "${JDK_HOME}" \
+    ${EXTRA_ARGS} \
+    "$@"

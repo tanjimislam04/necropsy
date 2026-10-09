@@ -114,3 +114,7 @@ hs_err_pid*.log
 /Tools/autopsy-mcp-stdio/dist/
 
 .claude
+
+# Local installer configs and runtimes
+.necropsy/
+etc/necropsy.conf
